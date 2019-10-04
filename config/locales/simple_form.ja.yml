@@ -71,7 +71,7 @@ ja:
         data: データ
         discoverable: ディレクトリに掲載する
         display_name: 表示名
-        email: メールアドレス
+        email: ユーザー名
         expires_in: 有効期限
         fields: プロフィール補足情報
         header: ヘッダー

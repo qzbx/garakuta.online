@@ -6,18 +6,18 @@
 
   .fields-group
     = f.simple_fields_for :notification_emails, hash_to_object(current_user.settings.notification_emails) do |ff|
-      = ff.input :follow, as: :boolean, wrapper: :with_label
-      = ff.input :follow_request, as: :boolean, wrapper: :with_label
-      = ff.input :reblog, as: :boolean, wrapper: :with_label
-      = ff.input :favourite, as: :boolean, wrapper: :with_label
-      = ff.input :mention, as: :boolean, wrapper: :with_label
+      = ff.hidden_field :follow, as: :boolean, wrapper: :with_label
+      = ff.hidden_field :follow_request, as: :boolean, wrapper: :with_label
+      = ff.hidden_field :reblog, as: :boolean, wrapper: :with_label
+      = ff.hidden_field :favourite, as: :boolean, wrapper: :with_label
+      = ff.hidden_field :mention, as: :boolean, wrapper: :with_label
 
       - if current_user.staff?
-        = ff.input :report, as: :boolean, wrapper: :with_label
+        = ff.hidden_field :report, as: :boolean, wrapper: :with_label
 
   .fields-group
     = f.simple_fields_for :notification_emails, hash_to_object(current_user.settings.notification_emails) do |ff|
-      = ff.input :digest, as: :boolean, wrapper: :with_label
+      = ff.hidden_field :digest, as: :boolean, wrapper: :with_label
 
   .fields-group
     = f.simple_fields_for :interactions, hash_to_object(current_user.settings.interactions) do |ff|

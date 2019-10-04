@@ -70,7 +70,7 @@ const emojify = (str, customEmojis = {}) => {
     rtn += str.slice(0, i) + replacement;
     str = str.slice(rend);
   }
-  return rtn + str;
+  return (rtn + str)
 };
 
 export default emojify;

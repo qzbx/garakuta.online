@@ -183,6 +183,9 @@ class Status extends ImmutablePureComponent {
     if (status.get('reblogged')) {
       this.props.dispatch(unreblog(status));
     } else {
+		if (!status.get('favourited')) {
+		  this.props.dispatch(favourite(status));
+		};
       if ((e && e.shiftKey) || !boostModal) {
         this.handleModalReblog(status);
       } else {

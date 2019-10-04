@@ -929,7 +929,8 @@ ja:
     title: "%{instance} 利用規約・プライバシーポリシー"
   themes:
     contrast: ハイコントラスト
-    default: Mastodon
+    default: (っ＾ω＾c)
+    custom: Mastodon
     mastodon-light: Mastodon (ライト)
   time:
     formats:
